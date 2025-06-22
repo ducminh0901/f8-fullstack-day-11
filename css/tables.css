@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    max-width: 1200px;
+}
+table,
+th,
+td {
+    border: 2px solid #000;
+}
+span {
+    display: block;
+    line-height: 1.5;
+}
+tr .wider {
+    padding-right: 50px;
+}
+th .notbold {
+    font-weight: 500;
+}
+th,
+td {
+    padding: 5px;
+}
+.bold {
+    font-weight: 700;
+}
+.end {
+    text-align: end;
+}
+.center {
+    text-align: center;
+}
