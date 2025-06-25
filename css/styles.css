@@ -373,19 +373,45 @@ h6 {
     margin: 25px 0 10px 0;
     color: rgba(255, 255, 255, 0.6);
 }
-.footer-subcribe button {
+.footer-subcribe .send-email {
+    position: relative;
+    display: inline-block;
     width: 95px;
+    height: 40px;
     line-height: 40px;
     border-radius: 20px;
+    margin-top: 5px;
     color: #fff;
     background-color: #b80257;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    margin-top: 5px;
+    z-index: 0;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
 }
-.footer-subcribe button:hover {
-    color: #b80257;
+
+.footer-subcribe .send-email::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
     background-color: #fff;
+    border-radius: 20px;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    z-index: -1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.footer-subcribe .send-email:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+.footer-subcribe .send-email:hover {
+    color: #b80257;
 }
 /* Scroll */
 .scroll-top {
